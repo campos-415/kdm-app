@@ -86,12 +86,12 @@ function NewsletterForm() {
   };
 
   return (
-    <div className="flex flex-col  space-y-8 md:w-[600px]">
+    <div className="flex flex-colspace-y-8 md:w-[600px]">
       <form
         onSubmit={handleSubmit}
         className="newsletter-form mt-10 animate-fade-in-3 flex justify-start items-center flex-col space-y-2">
         <div className="flex flex-col items-start space-y-2 ">
-          <div className="flex items-center justify-between space-x-2 ">
+          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-x-2 ">
             <div className="group inputForm">
               <UserCircleIcon className="inputFormIcon" />
               <input
@@ -115,7 +115,7 @@ function NewsletterForm() {
               />
             </div>
           </div>
-          <div className="flex items-center justify-between space-x-2 ">
+          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-x-2 ">
             <div className="group inputForm">
               <PhoneIcon className="inputFormIcon" />
               <input
@@ -139,7 +139,7 @@ function NewsletterForm() {
               />
             </div>
           </div>
-          <div className="flex items-center justify-between space-x-2 ">
+          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-x-2 ">
             <div className="group inputForm">
               <EnvelopeIcon className="inputFormIcon" />
               <input
