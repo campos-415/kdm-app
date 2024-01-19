@@ -1,10 +1,7 @@
 "use client"
 import NewsletterForm from "@/app/componets/NewsletterForm";
 import { EnvelopeIcon } from "@heroicons/react/16/solid";
-import KDMWhite from "../public/KDM(white).png"
-import KDMColorBlack from "../public/KDM(color:black).png"
-import KDMColorWhite from "../public/KDM(color:white).png"
-import KDMBlack from "../public/KDM(black).png"
+import KDMColorWhite from "../public/KDM(colorwhite).png"
 import Image from "next/image";
 import { useState } from "react";
 
@@ -20,21 +17,12 @@ export default function Home() {
       </div>
       <div className=" relative w-96 h-72 flex items-center justify-center duration-1000 text-stroke animate-title">
           <Image
-            src={KDMBlack}
-            alt="LogoImage"
-            // layout="fill"
-            // objectFit="contain"
-            className="bg-clip-content absolute"
-          />
-        <div className=" relative w-[362px] h-[266px] flex items-center duration-1000 text-stroke animate-title">
-          <Image
             src={KDMColorWhite}
             alt="LogoImage"
             // layout="fill"
             // objectFit="contain"
             className="bg-clip-content absolute"
           />
-        </div>
       </div>
       <NewsletterForm />
 
