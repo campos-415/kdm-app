@@ -10,7 +10,7 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import { gsap } from "gsap";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import AirplaneButton from "./AirplaneButton";
 import MessagesBox from "./MessagesBox";
 
@@ -85,13 +85,14 @@ function NewsletterForm() {
     setErrorMessage("");
   };
 
+
   return (
     <div className="flex flex-col space-y-8 md:w-[600px]">
       <form
         onSubmit={handleSubmit}
         className="newsletter-form mt-10 animate-fade-in-3 flex justify-start items-center flex-col space-y-2">
         <div className="flex flex-col items-start space-y-2 ">
-          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-x-2 ">
+          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0 sm:space-x-2 ">
             <div className="group inputForm">
               <UserCircleIcon className="inputFormIcon" />
               <input
@@ -115,7 +116,7 @@ function NewsletterForm() {
               />
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-x-2 ">
+          <div className="flex flex-col sm:flex-row items-center justify-between sm:space-y-0 space-y-2 sm:space-x-2 ">
             <div className="group inputForm">
               <PhoneIcon className="inputFormIcon" />
               <input
@@ -139,7 +140,7 @@ function NewsletterForm() {
               />
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-x-2 ">
+          <div className="flex flex-col sm:flex-row items-center justify-between sm:space-y-0 space-y-2 sm:space-x-2 ">
             <div className="group inputForm">
               <EnvelopeIcon className="inputFormIcon" />
               <input
@@ -170,7 +171,14 @@ function NewsletterForm() {
             active && "active"
           } disabled:!bg-[#17141F] disabled:grayscale-[65%] 
           disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base w-1/3`}
-          disabled={!emailAddress}
+          disabled={
+            !emailAddress ||
+            !firstName ||
+            !lastName ||
+            !phoneNumer ||
+            !instagramUsername ||
+            !userLocation
+          }
           type="submit">
           <AirplaneButton />
         </button>
