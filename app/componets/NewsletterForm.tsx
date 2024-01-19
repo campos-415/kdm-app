@@ -86,7 +86,7 @@ function NewsletterForm() {
   };
 
   return (
-    <div className="flex flex-colspace-y-8 md:w-[600px]">
+    <div className="flex flex-col space-y-8 md:w-[600px]">
       <form
         onSubmit={handleSubmit}
         className="newsletter-form mt-10 animate-fade-in-3 flex justify-start items-center flex-col space-y-2">

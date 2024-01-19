@@ -9,7 +9,7 @@ interface Props {
 function MessagesBox({success, error, dismissMessages}: Props) {
   return (
     <div className="relative">
-      {(success || error) && (
+      {(!success || !error) && (
         <div className="flex items-start space-x-2 bg-[#0A0E12] shadow-outline-gray text-white rounded-[9px] py-4 px-6 animate-fade-bottom absolute">
           <div className="h-6 w-6 bg-[#1B2926] flex items-center justify-center rounded-full border border-[#273130] flex-shrink-0">
             <CheckIcon className="h-4 w-4 text-[#81A89A]" />
