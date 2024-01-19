@@ -1,7 +1,7 @@
 "use client"
 import NewsletterForm from "@/app/componets/NewsletterForm";
 import { EnvelopeIcon } from "@heroicons/react/16/solid";
-import KDMColorWhite from "../public/KDM(colorwhite).png"
+import KDMColorWhite from "../public/KDMcolorwhite.png"
 import Image from "next/image";
 import { useState } from "react";
 
